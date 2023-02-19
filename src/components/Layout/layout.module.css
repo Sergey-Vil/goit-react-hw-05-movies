@@ -1,0 +1,27 @@
+.layout {
+  display: flex;
+  height: 100px;
+  background: #b1e9e6;
+  align-items: center;
+  gap: 30px;
+
+  justify-content: center;
+}
+/* .layout_link {
+  display: table-cell;
+  text-decoration: none;
+  margin: 50px 15px 20px;
+} */
+.btn_layout {
+  color: #5316ae;
+  font-weight: 800;
+  font-size: 16px;
+  height: 40px;
+  width: 100px;
+  border-color: rgb(115, 84, 238);
+  border-radius: 30px;
+}
+.btn_layout:focus,
+.btn_layout:hover {
+  background: #9cf246;
+}

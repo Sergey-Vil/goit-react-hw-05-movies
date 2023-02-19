@@ -1,0 +1,21 @@
+.film_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  text-align: center;
+
+  gap: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.film_img {
+  width: 280px;
+  height: 400px;
+}
+.film_name {
+  text-decoration: none;
+  background-color: rgb(204, 236, 236);
+  border: 2px solid blueviolet;
+  border-radius: 8px;
+}

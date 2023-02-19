@@ -1,0 +1,14 @@
+.btn_back {
+  margin: 20px auto;
+
+  font-weight: 800;
+  font-size: 16px;
+  height: 40px;
+  width: 100px;
+  color: #5316ae;
+  border-color: rgb(115, 84, 238);
+  border-radius: 30px;
+}
+.back_link {
+  display: flex;
+}

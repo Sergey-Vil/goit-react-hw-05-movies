@@ -1,0 +1,26 @@
+.details {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-left: 30px;
+}
+.nav_detail {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  justify-content: center;
+}
+.detail {
+  color: #5316ae;
+  font-weight: 800;
+  font-size: 16px;
+  height: 40px;
+  width: 100px;
+  border-color: rgb(115, 84, 238);
+  border-radius: 30px;
+}
