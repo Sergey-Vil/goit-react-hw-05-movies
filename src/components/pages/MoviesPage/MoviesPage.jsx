@@ -13,8 +13,12 @@ const Movies = () => {
   const [queryFilm, setQueryFilm] = useState(query);
   useEffect(() => {
     const getSearchList = async () => {
-      const dataSearch = await getMoviesSearch(query);
-      setSearchList(dataSearch.data.results);
+      try {
+        const dataSearch = await getMoviesSearch(query);
+        setSearchList(dataSearch.data.results);
+      } catch (error) {
+        console.log(error);
+      }
     };
     getSearchList();
   }, [query]);

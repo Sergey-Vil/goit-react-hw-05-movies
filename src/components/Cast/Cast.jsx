@@ -1,6 +1,6 @@
 import { getCastId } from 'components/services/moviesService';
 import { useEffect, useState } from 'react';
-import { Outlet, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import css from './cast.module.css';
 
 const Cast = () => {
@@ -9,9 +9,12 @@ const Cast = () => {
 
   useEffect(() => {
     const getCastList = async () => {
-      const dataList = await getCastId(movieId);
-
-      setCastList(dataList.data);
+      try {
+        const dataList = await getCastId(movieId);
+        setCastList(dataList.data);
+      } catch (error) {
+        console.log(error);
+      }
     };
     getCastList();
   }, [movieId]);
@@ -30,7 +33,6 @@ const Cast = () => {
                     : 'noFoto'
                 }
                 alt={item.name}
-                // width="30"
               />
               <p>{item.name}</p>
               <p>
@@ -40,7 +42,6 @@ const Cast = () => {
             </li>
           ))}
       </ul>
-      <Outlet />
     </>
   );
 };

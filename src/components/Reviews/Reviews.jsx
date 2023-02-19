@@ -5,11 +5,15 @@ import { Outlet, useParams } from 'react-router-dom';
 const Reviews = () => {
   const [reviews, setReviews] = useState();
   const { movieId } = useParams();
+
   useEffect(() => {
     const getReviews = async () => {
-      const dataReviews = await getReviewsId(movieId);
-
-      setReviews(dataReviews.data.results);
+      try {
+        const dataReviews = await getReviewsId(movieId);
+        setReviews(dataReviews.data.results);
+      } catch (error) {
+        console.log(error);
+      }
     };
     getReviews();
   }, [movieId]);
